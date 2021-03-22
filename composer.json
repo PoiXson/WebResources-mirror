@@ -1,0 +1,18 @@
+{
+	"name":        "pxn/webresources",
+	"description": "Common web frameworks and libraries",
+	"type":        "library",
+	"homepage":    "https://web11.net/",
+	"license":     "GPL-3.0",
+	"keywords": [ "css", "js", "web", "framework", "bootstrap", "bootswatch", "jquery", "icon" ],
+	"replace": {
+		"twbs/bootstrap": "*",
+		"thomaspark/bootswatch": "*",
+		"components/jquery": "*"
+	},
+	"scripts": {
+		"post-update-cmd": [
+			"sh resource-dl.sh --all --dest public/static"
+		]
+	}
+}
