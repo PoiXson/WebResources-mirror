@@ -250,7 +250,7 @@ echo
 
 
 
-if [ $DL_ALL -eq $YES ]; then
+if [[ $DL_ALL -eq $YES ]]; then
 	DL_PACKAGES="bootstrap bootstrap-icons bootswatch jquery"
 fi
 if [ -z $DL_PACKAGES ]; then
