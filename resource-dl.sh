@@ -253,7 +253,7 @@ echo
 if [[ $DL_ALL -eq $YES ]]; then
 	DL_PACKAGES="bootstrap bootstrap-icons bootswatch jquery"
 fi
-if [ -z $DL_PACKAGES ]; then
+if [[ -z $DL_PACKAGES ]]; then
 	echo
 	failure "No packages selected to download"
 	echo
