@@ -2,7 +2,7 @@
 	"name":        "pxn/webresources",
 	"description": "Common web frameworks and libraries",
 	"type":        "library",
-	"homepage":    "https://web11.net/",
+	"homepage":    "https://poixson.com/",
 	"license":     "GPL-3.0",
 	"keywords": [ "css", "js", "web", "framework", "bootstrap", "bootswatch", "jquery", "icon" ],
 	"replace": {
