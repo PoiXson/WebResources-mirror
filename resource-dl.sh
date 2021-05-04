@@ -208,8 +208,12 @@ function dl_datatables() {
 				|| exit 1
 	\popd >/dev/null
 	\install -m 0664 \
+		"$temp_dir/datatables/media/css/jquery.dataTables.css"         \
+		"$temp_dir/datatables/media/css/jquery.dataTables.min.css"     \
 		"$temp_dir/datatables/media/css/dataTables.bootstrap4.css"     \
 		"$temp_dir/datatables/media/css/dataTables.bootstrap4.min.css" \
+		"$temp_dir/datatables/media/js/jquery.dataTables.js"         \
+		"$temp_dir/datatables/media/js/jquery.dataTables.min.js"     \
 		"$temp_dir/datatables/media/js/dataTables.bootstrap4.js"     \
 		"$temp_dir/datatables/media/js/dataTables.bootstrap4.min.js" \
 		"$DEST/datatables/" \
