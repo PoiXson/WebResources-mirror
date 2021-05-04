@@ -267,7 +267,7 @@ done
 
 
 if [ -z $DEST ]; then
-	DEST="public/static/"
+	DEST="public/static"
 #	echo
 #	failure "Destination not set"
 #	echo
@@ -276,8 +276,8 @@ fi
 if [[ "$DEST" != "/"* ]]; then
 	DEST="$PWD/$DEST"
 fi
-if [[ "$DEST" != *"/" ]]; then
-	DEST="$DEST/"
+if [[ "$DEST" == *"/" ]]; then
+	DEST=${DEST%/*}
 fi
 echo -e "Destination: ${COLOR_BROWN}${DEST}${COLOR_RESET}"
 echo
