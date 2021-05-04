@@ -1,6 +1,13 @@
 WebResources - Web resources bundle
 
 
+2021-03-22 - 0.1.1
+==================
+* added DataTables 1.10.21
+* moved bootstrap/css/ and js/ into a common path
+* fixed bootstrap-icons.woff2 binary file
+
+
 2021-03-22 - 0.1.0
 ==================
 * initial release
