@@ -1,6 +1,11 @@
 WebResources - Web resources bundle
 
 
+2021-04-04 - 0.1.2
+==================
+* added missing files for DataTables
+
+
 2021-04-04 - 0.1.1
 ==================
 * added DataTables 1.10.21
