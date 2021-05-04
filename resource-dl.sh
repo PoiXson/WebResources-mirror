@@ -78,14 +78,11 @@ function dl_bootstrap() {
 		"$temp_dir/bootstrap/dist/css/bootstrap-reboot.min.css" \
 		"$temp_dir/bootstrap/dist/css/bootstrap-grid.css"       \
 		"$temp_dir/bootstrap/dist/css/bootstrap-grid.min.css"   \
-		"$DEST/bootstrap/css/" \
-			|| exit 1
-	\install -m 0664 \
 		"$temp_dir/bootstrap/dist/js/bootstrap.js"            \
 		"$temp_dir/bootstrap/dist/js/bootstrap.min.js"        \
 		"$temp_dir/bootstrap/dist/js/bootstrap.bundle.js"     \
 		"$temp_dir/bootstrap/dist/js/bootstrap.bundle.min.js" \
-		"$DEST/bootstrap/js/" \
+		"$DEST/bootstrap/" \
 			|| exit 1
 	echo "Removing temp files.."
 	\rm -Rf --preserve-root  "$temp_dir"
