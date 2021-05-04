@@ -6,11 +6,13 @@ repo_bootstrap="https://github.com/twbs/bootstrap.git"
 repo_bootstrap_icons="https://github.com/twbs/icons.git"
 repo_bootswatch="https://github.com/thomaspark/bootswatch.git"
 repo_jquery="https://github.com/jquery/jquery.git"
+repo_datatables="https://github.com/DataTables/DataTables.git"
 
 version_bootstrap="v4.6.0"
 version_bootstrap_icons="v1.4.0"
 version_bootswatch="v4.6.0"
 version_jquery="3.6.0"
+version_datatables="1.10.21"
 
 
 
@@ -37,6 +39,7 @@ function DisplayHelp() {
 	echo -e "  ${COLOR_GREEN}bootstrap-icons${COLOR_RESET}"
 	echo -e "  ${COLOR_GREEN}bootswatch${COLOR_RESET}"
 	echo -e "  ${COLOR_GREEN}jquery${COLOR_RESET}"
+	echo -e "  ${COLOR_GREEN}datatables${COLOR_RESET}"
 	echo
 	echo -e "${COLOR_BROWN}Options:${COLOR_RESET}"
 	echo -e "  ${COLOR_GREEN}-a, --all${COLOR_RESET}              Download all available packages"
@@ -191,6 +194,37 @@ function dl_jquery() {
 
 
 
+function dl_datatables() {
+	title "DataTables $version_datatables"
+	DEST="$1"
+	if [ -z $DEST ]; then
+		failure "Destination not set"; exit 1
+	fi
+	[[ ! -d "$DEST/datatables" ]] && \mkdir -pv "$DEST/datatables"
+	temp_dir=$( \mktemp -d )
+	if [ -z temp_dir ]; then
+		failure "Failed to make a temp dir"; exit 1
+	fi
+	echo "Using temp dir: $temp_dir"
+	\pushd "$temp_dir" >/dev/null || exit 1
+		\git clone --depth=1 -c advice.detachedHead=false \
+			-b "$version_datatables"  "$repo_datatables"  "datatables" \
+				|| exit 1
+	\popd >/dev/null
+	\install -m 0664 \
+		"$temp_dir/datatables/media/css/dataTables.bootstrap4.css"     \
+		"$temp_dir/datatables/media/css/dataTables.bootstrap4.min.css" \
+		"$temp_dir/datatables/media/js/dataTables.bootstrap4.js"     \
+		"$temp_dir/datatables/media/js/dataTables.bootstrap4.min.js" \
+		"$DEST/datatables/" \
+			|| exit 1
+	echo "Removing temp files.."
+	\rm -Rf --preserve-root  "$temp_dir"
+	echo
+}
+
+
+
 # parse args
 echo
 if [ $# -eq 0 ]; then
@@ -251,7 +285,7 @@ echo
 
 
 if [[ $DL_ALL -eq $YES ]]; then
-	DL_PACKAGES="bootstrap bootstrap-icons bootswatch jquery"
+	DL_PACKAGES="bootstrap bootstrap-icons bootswatch jquery datatables"
 fi
 if [[ -z $DL_PACKAGES ]]; then
 	echo
@@ -275,6 +309,9 @@ for PACKAGE in $DL_PACKAGES; do
 	;;
 	jquery)
 		dl_jquery "$DEST"
+	;;
+	datatables)
+		dl_datatables "$DEST"
 	;;
 	*)
 		echo

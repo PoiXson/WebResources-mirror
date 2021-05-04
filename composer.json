@@ -4,11 +4,12 @@
 	"type":        "library",
 	"homepage":    "https://poixson.com/",
 	"license":     "GPL-3.0",
-	"keywords": [ "css", "js", "web", "framework", "bootstrap", "bootswatch", "jquery", "icon" ],
+	"keywords": [ "css", "js", "web", "framework", "bootstrap", "bootswatch", "jquery", "datatables", "icon" ],
 	"replace": {
 		"twbs/bootstrap": "*",
 		"thomaspark/bootswatch": "*",
-		"components/jquery": "*"
+		"components/jquery": "*",
+		"datatables/datatables": "*"
 	},
 	"scripts": {
 		"post-update-cmd": [
