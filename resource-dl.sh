@@ -59,8 +59,7 @@ function dl_bootstrap() {
 	if [ -z $DEST ]; then
 		failure "Destination not set"; exit 1
 	fi
-	[[ ! -d "$DEST/bootstrap/css" ]] && \mkdir -pv "$DEST/bootstrap/css"
-	[[ ! -d "$DEST/bootstrap/js"  ]] && \mkdir -pv "$DEST/bootstrap/js"
+	[[ ! -d "$DEST/bootstrap" ]] && \mkdir -pv "$DEST/bootstrap"
 	temp_dir=$( \mktemp -d )
 	if [ -z temp_dir ]; then
 		failure "Failed to make a temp dir"; exit 1
