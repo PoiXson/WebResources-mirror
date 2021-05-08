@@ -202,6 +202,10 @@ function dl_datatables() {
 		\wget "https://cdn.datatables.net/$version_datatables/css/jquery.dataTables.min.css"  || exit 1
 		\wget "https://cdn.datatables.net/$version_datatables/js/jquery.dataTables.js"        || exit 1
 		\wget "https://cdn.datatables.net/$version_datatables/js/jquery.dataTables.min.js"    || exit 1
+		\wget "https://cdn.datatables.net/$version_datatables/css/dataTables.bootstrap5.css"      || exit 1
+		\wget "https://cdn.datatables.net/$version_datatables/css/dataTables.bootstrap5.min.css"  || exit 1
+		\wget "https://cdn.datatables.net/$version_datatables/js/dataTables.bootstrap5.js"        || exit 1
+		\wget "https://cdn.datatables.net/$version_datatables/js/dataTables.bootstrap5.min.js"    || exit 1
 	\popd >/dev/null
 }
 
