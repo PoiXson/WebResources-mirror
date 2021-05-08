@@ -12,7 +12,7 @@ version_bootstrap="v5.0.0"
 version_bootstrap_icons="v1.4.1"
 version_bootswatch="v5.0.0"
 version_jquery="3.6.0"
-version_datatables="1.10.21"
+version_datatables="1.10.24"
 
 
 
