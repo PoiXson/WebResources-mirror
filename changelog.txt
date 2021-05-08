@@ -1,6 +1,11 @@
 WebResources - Web resources bundle
 
 
+2021-05-08 - 0.1.4
+==================
+* updated datatables to 1.10.24
+
+
 2021-05-08 - 0.1.3
 ==================
 * updated to bootstrap 5.0.0
