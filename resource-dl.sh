@@ -197,30 +197,12 @@ function dl_datatables() {
 		failure "Destination not set"; exit 1
 	fi
 	[[ ! -d "$DEST/datatables" ]] && \mkdir -pv "$DEST/datatables"
-	temp_dir=$( \mktemp -d )
-	if [ -z temp_dir ]; then
-		failure "Failed to make a temp dir"; exit 1
-	fi
-	echo "Using temp dir: $temp_dir"
-	\pushd "$temp_dir" >/dev/null || exit 1
-		\git clone --depth=1 -c advice.detachedHead=false \
-			-b "$version_datatables"  "$repo_datatables"  "datatables" \
-				|| exit 1
+	\pushd "$DEST/datatables/" >/dev/null  || exit 1
+		\wget "https://cdn.datatables.net/$version_datatables/css/jquery.dataTables.css"      || exit 1
+		\wget "https://cdn.datatables.net/$version_datatables/css/jquery.dataTables.min.css"  || exit 1
+		\wget "https://cdn.datatables.net/$version_datatables/js/jquery.dataTables.js"        || exit 1
+		\wget "https://cdn.datatables.net/$version_datatables/js/jquery.dataTables.min.js"    || exit 1
 	\popd >/dev/null
-	\install -m 0664 \
-		"$temp_dir/datatables/media/css/jquery.dataTables.css"         \
-		"$temp_dir/datatables/media/css/jquery.dataTables.min.css"     \
-		"$temp_dir/datatables/media/css/dataTables.bootstrap4.css"     \
-		"$temp_dir/datatables/media/css/dataTables.bootstrap4.min.css" \
-		"$temp_dir/datatables/media/js/jquery.dataTables.js"         \
-		"$temp_dir/datatables/media/js/jquery.dataTables.min.js"     \
-		"$temp_dir/datatables/media/js/dataTables.bootstrap4.js"     \
-		"$temp_dir/datatables/media/js/dataTables.bootstrap4.min.js" \
-		"$DEST/datatables/" \
-			|| exit 1
-	echo "Removing temp files.."
-	\rm -Rf --preserve-root  "$temp_dir"
-	echo
 }
 
 
