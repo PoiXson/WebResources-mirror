@@ -207,10 +207,10 @@ function dl_datatables() {
 		\wget -v -O dataTables.bootstrap5.js      "https://cdn.datatables.net/$version_datatables/js/dataTables.bootstrap5.js"        || exit 1
 		\wget -v -O dataTables.bootstrap5.min.js  "https://cdn.datatables.net/$version_datatables/js/dataTables.bootstrap5.min.js"    || exit 1
 	\popd >/dev/null
-	\sed -i '' 's/..\/images\///' public/static/datatables/jquery.dataTables.css
-	\sed -i '' 's/..\/images\///' public/static/datatables/jquery.dataTables.min.css
-	\sed -i '' 's/.png/.svg/' public/static/datatables/jquery.dataTables.css
-	\sed -i '' 's/.png/.svg/' public/static/datatables/jquery.dataTables.min.css
+	\sed -i''  's/..\/images\///'  "$DEST/datatables/jquery.dataTables.css"      || exit 1
+	\sed -i''  's/..\/images\///'  "$DEST/datatables/jquery.dataTables.min.css"  || exit 1
+	\sed -i''  's/.png/.svg/'  "$DEST/datatables/jquery.dataTables.css"      || exit 1
+	\sed -i''  's/.png/.svg/'  "$DEST/datatables/jquery.dataTables.min.css"  || exit 1
 	\install  "assets/datatables/"*.svg  "public/static/datatables/"  || exit 1
 }
 
