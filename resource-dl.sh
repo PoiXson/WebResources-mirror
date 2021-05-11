@@ -207,6 +207,8 @@ function dl_datatables() {
 		\wget -v -O dataTables.bootstrap5.js      "https://cdn.datatables.net/$version_datatables/js/dataTables.bootstrap5.js"        || exit 1
 		\wget -v -O dataTables.bootstrap5.min.js  "https://cdn.datatables.net/$version_datatables/js/dataTables.bootstrap5.min.js"    || exit 1
 	\popd >/dev/null
+	\sed -i '' 's/..\/images\///' public/static/datatables/jquery.dataTables.css
+	\sed -i '' 's/..\/images\///' public/static/datatables/jquery.dataTables.min.css
 }
 
 
