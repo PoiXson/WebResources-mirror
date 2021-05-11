@@ -12,7 +12,7 @@
 		"datatables/datatables": "*"
 	},
 	"scripts": {
-		"post-update-cmd": [
+		"pre-update-cmd": [
 			"sh resource-dl.sh --all --dest public/static"
 		]
 	}
