@@ -1,6 +1,11 @@
 WebResources - Web resources bundle
 
 
+2021-05-11 - 0.1.6
+==================
+* added custom images for datatables
+
+
 2021-05-08 - 0.1.5
 ==================
 * fixed datatables - added missing files
