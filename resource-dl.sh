@@ -198,14 +198,14 @@ function dl_datatables() {
 	fi
 	[[ ! -d "$DEST/datatables" ]] && \mkdir -pv "$DEST/datatables"
 	\pushd "$DEST/datatables/" >/dev/null  || exit 1
-		\wget "https://cdn.datatables.net/$version_datatables/css/jquery.dataTables.css"      || exit 1
-		\wget "https://cdn.datatables.net/$version_datatables/css/jquery.dataTables.min.css"  || exit 1
-		\wget "https://cdn.datatables.net/$version_datatables/js/jquery.dataTables.js"        || exit 1
-		\wget "https://cdn.datatables.net/$version_datatables/js/jquery.dataTables.min.js"    || exit 1
-		\wget "https://cdn.datatables.net/$version_datatables/css/dataTables.bootstrap5.css"      || exit 1
-		\wget "https://cdn.datatables.net/$version_datatables/css/dataTables.bootstrap5.min.css"  || exit 1
-		\wget "https://cdn.datatables.net/$version_datatables/js/dataTables.bootstrap5.js"        || exit 1
-		\wget "https://cdn.datatables.net/$version_datatables/js/dataTables.bootstrap5.min.js"    || exit 1
+		\wget -v -O jquery.dataTables.css     "https://cdn.datatables.net/$version_datatables/css/jquery.dataTables.css"      || exit 1
+		\wget -v -O jquery.dataTables.min.css "https://cdn.datatables.net/$version_datatables/css/jquery.dataTables.min.css"  || exit 1
+		\wget -v -O jquery.dataTables.js      "https://cdn.datatables.net/$version_datatables/js/jquery.dataTables.js"        || exit 1
+		\wget -v -O jquery.dataTables.min.js  "https://cdn.datatables.net/$version_datatables/js/jquery.dataTables.min.js"    || exit 1
+		\wget -v -O dataTables.bootstrap5.css     "https://cdn.datatables.net/$version_datatables/css/dataTables.bootstrap5.css"      || exit 1
+		\wget -v -O dataTables.bootstrap5.min.css "https://cdn.datatables.net/$version_datatables/css/dataTables.bootstrap5.min.css"  || exit 1
+		\wget -v -O dataTables.bootstrap5.js      "https://cdn.datatables.net/$version_datatables/js/dataTables.bootstrap5.js"        || exit 1
+		\wget -v -O dataTables.bootstrap5.min.js  "https://cdn.datatables.net/$version_datatables/js/dataTables.bootstrap5.min.js"    || exit 1
 	\popd >/dev/null
 }
 
