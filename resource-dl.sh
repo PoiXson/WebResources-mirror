@@ -209,6 +209,9 @@ function dl_datatables() {
 	\popd >/dev/null
 	\sed -i '' 's/..\/images\///' public/static/datatables/jquery.dataTables.css
 	\sed -i '' 's/..\/images\///' public/static/datatables/jquery.dataTables.min.css
+	\sed -i '' 's/.png/.svg/' public/static/datatables/jquery.dataTables.css
+	\sed -i '' 's/.png/.svg/' public/static/datatables/jquery.dataTables.min.css
+	\install  "assets/datatables/"*.svg  "public/static/datatables/"  || exit 1
 }
 
 
