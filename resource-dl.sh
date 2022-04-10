@@ -6,7 +6,7 @@ repo_bootstrap="https://github.com/twbs/bootstrap.git"
 repo_bootstrap_icons="https://github.com/twbs/icons.git"
 repo_bootswatch="https://github.com/thomaspark/bootswatch.git"
 repo_jquery="https://github.com/jquery/jquery.git"
-repo_datatables="https://github.com/DataTables/DataTables.git"
+repo_datatables="https://github.com/DataTables/DataTablesSrc.git"
 
 version_bootstrap="v5.1.3"
 version_bootstrap_icons="v1.8.1"
