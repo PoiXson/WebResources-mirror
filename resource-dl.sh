@@ -8,9 +8,9 @@ repo_bootswatch="https://github.com/thomaspark/bootswatch.git"
 repo_jquery="https://github.com/jquery/jquery.git"
 repo_datatables="https://github.com/DataTables/DataTablesSrc.git"
 
-version_bootstrap="v5.1.3"
-version_bootstrap_icons="v1.8.1"
-version_bootswatch="v5.1.3"
+version_bootstrap="v5.2.0"
+version_bootstrap_icons="v1.9.1"
+version_bootswatch="v5.2.0"
 version_jquery="3.6.0"
 version_datatables="1.11.5"
 
