@@ -1,6 +1,13 @@
 WebResources - Web resources bundle
 
 
+2022-08-03 - 0.1.8
+==================
+* updated bootstrap to 5.2.0
+* updated bootswatch to 5.2.0
+* updated bootstrap-icons to 1.9.1
+
+
 2021-05-11 - 0.1.7
 ==================
 * added custom images for datatables
