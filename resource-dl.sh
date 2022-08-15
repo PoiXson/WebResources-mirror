@@ -71,16 +71,26 @@ function dl_bootstrap() {
 				|| exit 1
 	\popd >/dev/null
 	\install -m 0664 \
-		"$temp_dir/bootstrap/dist/css/bootstrap.css"            \
-		"$temp_dir/bootstrap/dist/css/bootstrap.min.css"        \
-		"$temp_dir/bootstrap/dist/css/bootstrap-reboot.css"     \
-		"$temp_dir/bootstrap/dist/css/bootstrap-reboot.min.css" \
-		"$temp_dir/bootstrap/dist/css/bootstrap-grid.css"       \
-		"$temp_dir/bootstrap/dist/css/bootstrap-grid.min.css"   \
-		"$temp_dir/bootstrap/dist/js/bootstrap.js"            \
-		"$temp_dir/bootstrap/dist/js/bootstrap.min.js"        \
-		"$temp_dir/bootstrap/dist/js/bootstrap.bundle.js"     \
-		"$temp_dir/bootstrap/dist/js/bootstrap.bundle.min.js" \
+		"$temp_dir/bootstrap/dist/css/bootstrap.css"                \
+		"$temp_dir/bootstrap/dist/css/bootstrap.css.map"            \
+		"$temp_dir/bootstrap/dist/css/bootstrap.min.css"            \
+		"$temp_dir/bootstrap/dist/css/bootstrap.min.css.map"        \
+		"$temp_dir/bootstrap/dist/css/bootstrap-reboot.css"         \
+		"$temp_dir/bootstrap/dist/css/bootstrap-reboot.css.map"     \
+		"$temp_dir/bootstrap/dist/css/bootstrap-reboot.min.css"     \
+		"$temp_dir/bootstrap/dist/css/bootstrap-reboot.min.css.map" \
+		"$temp_dir/bootstrap/dist/css/bootstrap-grid.css"           \
+		"$temp_dir/bootstrap/dist/css/bootstrap-grid.css.map"       \
+		"$temp_dir/bootstrap/dist/css/bootstrap-grid.min.css"       \
+		"$temp_dir/bootstrap/dist/css/bootstrap-grid.min.css.map"   \
+		"$temp_dir/bootstrap/dist/js/bootstrap.js"                  \
+		"$temp_dir/bootstrap/dist/js/bootstrap.js.map"              \
+		"$temp_dir/bootstrap/dist/js/bootstrap.min.js"              \
+		"$temp_dir/bootstrap/dist/js/bootstrap.min.js.map"          \
+		"$temp_dir/bootstrap/dist/js/bootstrap.bundle.js"           \
+		"$temp_dir/bootstrap/dist/js/bootstrap.bundle.js.map"       \
+		"$temp_dir/bootstrap/dist/js/bootstrap.bundle.min.js"       \
+		"$temp_dir/bootstrap/dist/js/bootstrap.bundle.min.js.map"   \
 		"$DEST/bootstrap/" \
 			|| exit 1
 	echo "Removing temp files.."
