@@ -3,7 +3,7 @@
 	"description": "Common web frameworks and libraries",
 	"type":        "library",
 	"homepage":    "https://poixson.com/",
-	"license":     "AGPL-3.0",
+	"license":     "AGPLv3+ADD-PXN-V1",
 	"keywords": [ "css", "js", "web", "framework", "bootstrap", "bootswatch", "jquery", "datatables", "icon" ],
 	"replace": {
 		"twbs/bootstrap": "*",
