@@ -16,7 +16,7 @@ version_datatables="1.11.5"
 
 
 
-source /usr/bin/pxn/scripts/common.sh  || exit 1
+source  "/usr/bin/pxn/scripts/common.sh"  || exit 1
 
 
 
